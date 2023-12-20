@@ -30,8 +30,8 @@
                       </tr>
                       <tr>
                         <th>Images</th>
-                        <td>: <a href="{{asset('storage/admin/'.$article->img)}}" target="_blank" rel="noopener noreferrer">
-                            <img src="{{asset('storage/admin/'.$article->img)}}" alt="" srcset="" width="100px;">
+                        <td>: <a href="{{asset('storage/admin/article/'.$article->img)}}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{asset('storage/admin/article/'.$article->img)}}" alt="" srcset="" width="100px;">
                             </a>
                             
                         </td> 
