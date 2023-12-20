@@ -7,7 +7,7 @@ use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-// use Storage;
+// use Storage; 
 use App\Http\Requests\ArticleRequest;
 
 use Illuminate\Support\Facades\Storage;
@@ -76,7 +76,7 @@ class ArticleController extends Controller
 
         $file = $request->file('img'); //ambil nama gambar (foto)
         $fileName =  uniqid().'.'.$file->getClientOriginalExtension(); //ambil format gambar
-        $file->storeAs('public/admin/', $fileName); //folder simpan
+        $file->storeAs('public/admin/article/', $fileName); //folder simpan
 
         $data['img'] = $fileName;
         $data['slug'] = Str::slug($data['title']);
@@ -121,10 +121,10 @@ class ArticleController extends Controller
         if ($request->file('img')) {
             $file = $request->file('img'); //ambil nama gambar (foto)
             $fileName =  uniqid().'.'.$file->getClientOriginalExtension(); //ambil format gambar
-            $file->storeAs('public/admin/', $fileName); //folder simpan
+            $file->storeAs('public/admin/article/', $fileName); //folder simpan
     
             // unlink storage// Delete old image
-            Storage::delete('public/admin/'.$request->oldImg);
+            Storage::delete('public/admin/article/'.$request->oldImg);
 
             $data['img'] = $fileName;
         } else {
@@ -147,7 +147,7 @@ class ArticleController extends Controller
     {
         //
         $data = Article::find($id);
-        Storage::delete('public/admin/'.$data->img);
+        Storage::delete('public/admin/article/'.$data->img);
         $data->delete();
         return response()->json([
             'message' => 'Data article has been deleted'

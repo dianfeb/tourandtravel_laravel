@@ -1,9 +1,11 @@
 <?php
 
+use UniSharp\LaravelFilemanager\Lfm;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,5 @@ Route::resource('/article', ArticleController::class);
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['guest']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Route::resource('/slider', SliderController::class);
