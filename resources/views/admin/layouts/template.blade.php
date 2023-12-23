@@ -124,6 +124,12 @@
                         class="fas fa-image"></span></span><span class="nav-link-text ps-1">Slider</span></div>
                 </a><!-- parent pages-->
 
+                
+                <a class="nav-link" href="{{url('whyus')}}" role="button">
+                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                        class="fas fa-image"></span></span><span class="nav-link-text ps-1">Why Choose Us</span></div>
+                </a><!-- parent pages-->
+
 
                 <a class="nav-link" href="../app/chat.html" role="button">
                   <div class="d-flex align-items-center"><span class="nav-link-icon"><span

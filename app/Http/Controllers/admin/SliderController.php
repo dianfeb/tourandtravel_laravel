@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Slider;
-use App\Models\Article;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
