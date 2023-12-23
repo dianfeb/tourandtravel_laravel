@@ -2,6 +2,7 @@
 
 use UniSharp\LaravelFilemanager\Lfm;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\WhyusController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -39,3 +40,4 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['guest']], fun
 });
 
 Route::resource('/slider', SliderController::class);
+Route::resource('/whyus', WhyusController::class);
