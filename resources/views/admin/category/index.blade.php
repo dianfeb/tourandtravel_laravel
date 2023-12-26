@@ -27,7 +27,7 @@
      <div class="col-md-12">
         <div id="tableExample2">
             <div class="table-responsive scrollbar">
-              <table class="table table-bordered table-striped fs-10 mb-0">
+              <table class="table table-bordered table-striped fs-10 mb-0" style="width:100%">
                 <thead class="bg-200">
                   <tr>
                     <th class="text-900 sort">No</th>

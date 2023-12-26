@@ -2,6 +2,7 @@
 
 use UniSharp\LaravelFilemanager\Lfm;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\WhyusController;
 use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\Admin\ArticleController;
@@ -41,3 +42,6 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['guest']], fun
 
 Route::resource('/slider', SliderController::class);
 Route::resource('/whyus', WhyusController::class);
+Route::get('/page', [PageController::class, 'index']);
+Route::get('page/{id}/edit', [PageController::class, 'edit']);
+Route::PUT('page/{id}/edit', [PageController::class, 'update']);

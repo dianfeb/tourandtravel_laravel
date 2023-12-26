@@ -5,15 +5,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
 @endpush
-@section('title', 'Article')
+@section('title', 'Pages')
 
 @section('content')
 <div class="card">
   <div class="card-body overflow-hidden p-lg-6">
     <div class="row align-items-center">
         <div class="col-lg-12 ps-lg-4 mb-3 p-3 text-center text-lg-start border-bottom">
-            <h3 class="text-primary">Article</h3>
-            <a href="{{url('article/create')}}" class="btn btn-falcon-primary mt-2"><i class="fas fa-plus me-2"></i>Add Article
+            <h3 class="text-primary">{{$page->name}}</h3>
+            <a href="{{url('page/create')}}" class="btn btn-falcon-primary mt-2"><i class="fas fa-plus me-2"></i>Add Data
             </a>
           </div>
           @if ($errors->any())
@@ -32,13 +32,9 @@
               <table class="table table-bordered table-striped fs-10 mb-0" style="width:100%">
                 <thead class="bg-200">
                   <tr>
-                    <th class="text-900 sort" >No</th>
-                    <th class="text-900 sort">Category</th>
-                    <th class="text-900 sort">Title</th>
-                    <th class="text-900 sort">Status</th>
-                    <th class="text-900 sort">Views</th>
-                    <th class="text-900 sort">Published</th>
-                
+                    <th class="text-900 sort">No</th>
+                    <th class="text-900 sort">Name</th>
+                 
                     <th class="text-900 sort" style="width:20%">Action</th>
                   </tr>
                 </thead>
@@ -77,7 +73,7 @@
             })
           }
 
-          function deleteArticle(e) {
+          function deletePage(e) {
             let id = e.getAttribute('data-id');
 
             Swal.fire({
@@ -96,7 +92,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                   },
                   type: 'DELETE',
-                  url: '/article/' + id,
+                  url: '/page/' + id,
                   dataType: "json",
                   success: function(response) {
                     Swal.fire({
@@ -104,7 +100,7 @@
                       text: response.message,
                       icon: 'success',
                     }).then((result) => {
-                      window.location.href = '/article';
+                      window.location.href = '/page';
                     })
                   },
                   error: function(xhr, ajaxOptions, thrownError) {
@@ -130,25 +126,10 @@
                 },
                 
                 {
-                  data:'category_id',
-                  name:'category_id'
+                  data:'name',
+                  name:'name'
                 },
-                {
-                  data:'title',
-                  name:'title'
-                },
-                {
-                  data:'views',
-                  name:'views'
-                },
-                {
-                  data:'status',
-                  name:'status'
-                },
-                {
-                  data:'publish_date',
-                  name:'publish_date'
-                },
+              
                 {
                   data:'button',
                   name:'button'
