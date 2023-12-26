@@ -93,51 +93,69 @@
               </li>
               <li class="nav-item">
                 <!-- label-->
-                <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
-                  <div class="col-auto navbar-vertical-label">Pages</div>
-                  <div class="col ps-0">
-                    <hr class="mb-0 navbar-vertical-divider" />
-                  </div>
-                </div><!-- parent pages-->
-                <a class="nav-link dropdown-indicator" href="#article" role="button"
-                  data-bs-toggle="collapse" aria-expanded="false" aria-controls="article">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-folder"></span></span><span class="nav-link-text ps-1">Article</span></div>
-                </a>
-                <ul class="nav collapse" id="article">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{url('categories')}}">
-                      <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Category</span></div>
-                    </a><!-- more inner pages-->
-                  </li>
+                  <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="col-auto navbar-vertical-label">Home</div>
+                    <div class="col ps-0">
+                      <hr class="mb-0 navbar-vertical-divider" />
+                    </div>
+                  </div><!-- parent pages-->
+                  <a class="nav-link dropdown-indicator" href="#article" role="button"
+                    data-bs-toggle="collapse" aria-expanded="false" aria-controls="article">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                          class="fas fa-folder"></span></span><span class="nav-link-text ps-1">Article</span></div>
+                  </a>
+                  <ul class="nav collapse" id="article">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url('categories')}}">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Category</span></div>
+                      </a><!-- more inner pages-->
+                    </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{url('article')}}">
-                      <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Content</span></div>
-                    </a><!-- more inner pages-->
-                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url('article')}}">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Content</span></div>
+                      </a><!-- more inner pages-->
+                    </li>
+                    
+                  </ul><!-- parent pages-->
+
+                  <a class="nav-link" href="{{url('slider')}}" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                          class="fas fa-image"></span></span><span class="nav-link-text ps-1">Slider</span></div>
+                  </a><!-- parent pages-->
+
                   
-                </ul><!-- parent pages-->
-
-                <a class="nav-link" href="{{url('slider')}}" role="button">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-image"></span></span><span class="nav-link-text ps-1">Slider</span></div>
-                </a><!-- parent pages-->
-
-                
-                <a class="nav-link" href="{{url('whyus')}}" role="button">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-image"></span></span><span class="nav-link-text ps-1">Why Choose Us</span></div>
-                </a><!-- parent pages-->
+                  <a class="nav-link" href="{{url('whyus')}}" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                          class="fas fa-image"></span></span><span class="nav-link-text ps-1">Why Choose Us</span></div>
+                  </a><!-- parent pages-->
 
 
-                <a class="nav-link" href="../app/chat.html" role="button">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Chat</span></div>
-                </a><!-- parent pages-->
-                
+                  <a class="nav-link" href="../app/chat.html" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                          class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Chat</span></div>
+                  </a><!-- parent pages-->
+                  
              
+              </li>
 
+              <li class="nav-item">
+                <!-- label-->
+                  <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="col-auto navbar-vertical-label">Pages</div>
+                    <div class="col ps-0">
+                      <hr class="mb-0 navbar-vertical-divider" />
+                    </div>
+                  </div><!-- parent pages-->
+                
+
+                  <a class="nav-link" href="page/1/edit" role="button">
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                          class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Page</span></div>
+                  </a><!-- parent pages-->
+                  
+             
+              </li>
             </ul>
 
           </div>
